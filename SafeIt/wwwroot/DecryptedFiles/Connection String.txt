@@ -1,0 +1,13 @@
+SQL Server  
+"ConnectionStrings": {
+    "cs": "server=DESKTOP-HDCNGVM\\SQLEXPRESS;database=EMS_DB;Trusted_Connection=true;"
+  }
+
+PostgreSQL
+"ConnectionStrings": {
+   "cs": "Server=localhost;Database=TaskX;User Id=postgres;Password=5975;Pooling=false;"
+}
+
+
+
+

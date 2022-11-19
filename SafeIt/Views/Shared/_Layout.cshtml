@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/file.png">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SafeIt.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <nav id="custom-navbar">
+        <a href="/Account/Logout" class="btn btn-sm btn-danger" style="float:right;">Logout</a>
+        <h4 id="brand">SafeIt</h4>
+    </nav>
+
+    <div class="container my-5">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    @await Component.InvokeAsync("Notyf") 
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

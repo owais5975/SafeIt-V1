@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafeIt", "Optics_CMS.UI\SafeIt.csproj", "{C56C0C59-BF23-4552-9F45-5651A7E98281}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafeIt", "SafeIt\SafeIt.csproj", "{054622EC-0E52-4B30-BA56-C5E4A7D4E5C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C56C0C59-BF23-4552-9F45-5651A7E98281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C56C0C59-BF23-4552-9F45-5651A7E98281}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C56C0C59-BF23-4552-9F45-5651A7E98281}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C56C0C59-BF23-4552-9F45-5651A7E98281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{054622EC-0E52-4B30-BA56-C5E4A7D4E5C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054622EC-0E52-4B30-BA56-C5E4A7D4E5C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054622EC-0E52-4B30-BA56-C5E4A7D4E5C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054622EC-0E52-4B30-BA56-C5E4A7D4E5C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BD841ED8-4958-44F9-BDE9-3BBD7E468347}
+		SolutionGuid = {875B6F9C-028A-4EC7-93D5-4DD52EBBA531}
 	EndGlobalSection
 EndGlobal

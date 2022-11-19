@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #filesTable_length, #filesTable_filter, #filesTable_info{
+        display:none
+    }
+    .paginate_button {
+        padding: 0.5% 1%;
+        margin: 2% 0.2%!important;
+        border: 1px solid white;
+        text-decoration: none;
+        color: grey;
+        border-radius: 5px;
+        cursor:pointer;
+    }
+    .paginate_button:hover{
+        color: white;
+        background-color: #EDBB99 !important;
+    }
+    .current{
+        color: white;
+        background: #DC7633 !important;
+    }
+
+</style>
+
+
+<div>
+    <a href="encrypt" class="btn btn-sm btn-outline-secondary my-2">Encrypt File</a>
+    <a href="decrypt" class="btn btn-sm btn-outline-secondary my-2">Decrypt File</a>
+    <table id="filesTable" class="table table-hover styled-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Key</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+             var table = $("#filesTable").DataTable({
+                 paging: true,
+                 "processing": true,
+                 "serverSide": true,
+                 "filter": true,
+                "language": {
+                    "emptyTable": "No record found.",
+                    "processing":
+                        '<div class="text-center"><i class="fa fa-spinner fa-spin fa-3x fa-fw" style="color:#DC7633;"></i><span class="sr-only">Loading...</span></div>'
+                },
+                 "ajax": {
+                     "url": "/home/getdata",
+                     "type": "POST",
+                     "datatype": "json"
+                 },
+                 "columnDefs": [{
+                     "targets": [0,1,2],
+                     "orderable": false
+                 }],
+                 "columns": [
+                     { "data": "name", "name": "Name", "autoWidth": true },
+                     { "data": "type", "name": "Type", "autoWidth": true },
+                     {"render": function (data, type, row) { 
+                         return "<input type='password' class='text-center' value='"+row.key+"' title='Copy to clipboard' style='border:1px solid white !important;' onclick='CopyToClipboard(this)' readonly/>";
+                     }}      
+                ] 
+             });
+         }); 
+
+         const CopyToClipboard = (val) => {
+             debugger
+             navigator.clipboard.writeText(val.value); 
+
+
+             alert('Copied to clipboard')
+         }
+    </script>
+}
